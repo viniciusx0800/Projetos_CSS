@@ -1,4 +1,10 @@
 body
 {
-    background-color: aqua;
+    background-color: rgb(32, 34, 39);
+}
+
+h1{
+    color: aliceblue;
+    display: flex;
+    
 }

@@ -1,7 +1,39 @@
 body{
-    background-color: rgb(167, 103, 226);
+    background-color: rgb(68, 71, 71);
+}
+
+.titulo{
+    text-align: center;
+    background-color: rgb(87, 190, 122);
 }
 
 h1{
-    color: aquamarine;
+    color: rgb(240, 243, 248);
+}
+
+p{
+    color: aliceblue;
+    font-size: 30px;
+}
+
+nav{
+    padding: 10px;
+    width: 90px;
+
+}
+
+nav > a{
+    color: #f1eef1;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 1s;
+    font-size: 1.5em;
+}
+
+nav > a:hover{
+    background-color: #201e27;
+    color: #5edfc3;
+    width: 85px;
 }
