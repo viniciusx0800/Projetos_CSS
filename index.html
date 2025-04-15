@@ -1,61 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon/motorbike_8335671.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora de Porcentagem</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        input, button {
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Porcentagem</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="favicon/motorbike_8335671.png" type="image/x-icon" />
+  <style>
+    
+  </style>
 </head>
 <body>
-    <h1>Calculadora de Porcentagem</h1>
+    <div class="container">
+        <h1>Calculadora de Porcentagem</h1>
+        <div>
+          <label for="valor">Digite o valor:</label>
+          <input type="number" id="valor" placeholder="Ex: 100">
+        </div>
+        <div>
+          <label for="percentual">Digite a porcentagem:</label>
+          <input type="number" id="percentual" placeholder="Ex: 15">
+        </div>
+        <button id="calcularBtn">Calcular</button>
+        <div id="resultado"></div>
+        <div id="historico"></div>
 
+        <button id="toggleHistoricoBtn">Ver histórico</button>
+        <div id="historico" style="display: none;"></div>
+
+        <button id="limparHistoricoBtn">🗑️ Limpar histórico</button>
+
+      </div>
+
+      <script src="calculadoraP.js"></script>
    
-    <div>
-        <label for="valor">Digite o valor: </label>
-        <input type="number" id="valor" placeholder="Valor">
-    </div>
-    <div>
-        <label for="percentual">Digite a Porcentagem: </label>
-        <input type="number" id="percentual" placeholder="Percentual">
-    </div>
-
-  
-    <div>
-        <button onclick="calcularPorcentagem()">Calcular</button>
-    </div>
-
-    <div>
-        <p id="resultado"></p>
-    </div>
-
-
-    <script>
-        function calcularPorcentagem() {
-            const valor = parseFloat(document.getElementById('valor').value);
-            const percentual = parseFloat(document.getElementById('percentual').value);
-
-            if (isNaN(valor) || isNaN(percentual)) {
-                document.getElementById('resultado').textContent = "Por favor, insira valores válidos.";
-                return;
-            }
-
-            const resultado = (valor * percentual) / 100;
-            const resultadoTotal = valor + resultado;
-            const resultadoMenos = valor - resultado;
-            document.getElementById('resultado').textContent = ` ${percentual}% de ${valor} é R$ ${resultado.toFixed(2)}. valor + porcentagem é de R$ ${resultadoTotal.toFixed(2)}. valor - porcentagem R$ ${resultadoMenos.toFixed(2)}.`;
-        }
-    </script>
 </body>
 </html>
